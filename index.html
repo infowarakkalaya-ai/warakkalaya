@@ -1,1 +1,463 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warakkalaya - Gammalu Herbal Tumbler | වරක්කාලය - ගම්මාලු ඖෂධ කෝප්පය</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2d5a27;
+            --primary-dark: #1e3d1a;
+            --accent: #d4a373;
+            --accent-light: #faedcd;
+            --text-dark: #2b2d42;
+            --text-light: #f8f9fa;
+            --bg-light: #fefae0;
+            --bg-card: #ffffff;
+            --border-color: #e9ecef;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', 'Noto Sans Sinhala', sans-serif;
+            color: var(--text-dark);
+            background-color: #fcfbf7;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 55px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-order-nav {
+            background-color: var(--primary);
+            color: white !important;
+            padding: 8px 18px;
+            border-radius: 20px;
+            transition: background-color 0.3s !important;
+        }
+
+        .btn-order-nav:hover {
+            background-color: var(--primary-dark) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fefae0 0%, #e9edc9 100%);
+            padding: 60px 20px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .hero-title-en {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .hero-title-si {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .price-tag {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #d90429;
+            margin: 20px 0;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 15px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            background-color: #1eb954;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        /* Scientific/Tree Section */
+        .tree-section {
+            padding: 60px 20px;
+            background-color: #f4f6f0;
+        }
+
+        .tree-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .tree-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .tree-gallery {
+            flex: 1;
+            min-width: 300px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .tree-gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* How to Use Section */
+        .usage-section {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+
+        .usage-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .infographic-wrapper {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .infographic-wrapper img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Heritage / About Section */
+        .about-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #2d5a27 0%, #1e3d1a 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: var(--accent-light);
+        }
+
+        .about-section p {
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #cccccc;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 30px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title-en { font-size: 1.7rem; }
+            .hero-title-si { font-size: 1.4rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="Warakkalaya Logo.jpg" alt="Warakkalaya Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#science">The Science</a></li>
+                <li><a href="#usage">How to Use</a></li>
+                <li><a href="https://wa.me/94764334464?text=Hello%20Warakkalaya,%20I%20want%20to%20order%20the%20Gammalu%20Herbal%20Tumbler." class="btn-order-nav">Order Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-tag">100% Natural Organic Wood</span>
+                <h1 class="hero-title-en">Authentic Gammalu Herbal Tumbler for Natural Diabetes & Cholesterol Control</h1>
+                <h2 class="hero-title-si">දියවැඩියාව මට්ටු කරන මැජික් කෝප්පය – ගම්මාලු ඖෂධ කෝප්පය</h2>
+                <p>Hand-carved from pure <i>Pterocarpus marsupium</i> heartwood by Warakkalaya artisans in Matale.</p>
+                <div class="price-tag">
+                    Rs 3,850 LKR
+                </div>
+                <a href="https://wa.me/94764334464?text=Hello%20Warakkalaya,%20I%20would%20like%20to%20order%20the%20Gammalu%20Herbal%20Tumbler%20(Rs.%203,850)." class="cta-btn">
+                    📲 Order via WhatsApp (076 433 4464)
+                </a>
+            </div>
+            <div class="hero-image">
+                <img src="2.jpg" alt="Gammalu Herbal Tumbler and Packaging">
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features / Trust -->
+    <section class="features">
+        <h2 class="section-title">Clinical Validation & Certifications</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🏛️</div>
+                <h3>Government Validated</h3>
+                <p>Validated by Sri Lankan Government Universities for active botanical efficacy.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏥</div>
+                <h3>Ayurvedic Confirmed</h3>
+                <p>Clinically confirmed by Sri Sugatha Ayurvedic Hospital.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👨‍🔬</div>
+                <h3>Expert Supervised</h3>
+                <p>Supervised under Senior Ayurvedic Experts & Professor Piyal Marasinghe.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧪</div>
+                <h3>ITI Certified</h3>
+                <p>Certified production standards by the Industrial Technology Institute (ITI).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science & Natural Origin Section -->
+    <section class="tree-section" id="science">
+        <div class="tree-container">
+            <div class="tree-text">
+                <h2 style="color: var(--primary-dark); margin-bottom: 15px;">The Sacred Gammalu Tree (Pterocarpus marsupium)</h2>
+                <p style="margin-bottom: 15px;">
+                    The Gammalu tree is legendary in Sri Lankan traditional medicine. The heartwood contains naturally occurring pterostilbene and flavonoids that leach gently into drinking water, aiding in regulating blood sugar levels and cholesterol naturally.
+                </p>
+                <p style="font-weight: 600; color: #444;">
+                    ශ්‍රී ලංකාවේ ප්‍රචලිත ගම්මාලු ඖෂධීය ශාඛයේ අරටුව පමණක් භාවිතා කර අපගේ කෝප්ප නිපදවනු ලබයි.
+                </p>
+            </div>
+            <div class="tree-gallery">
+                <img src="VENGA-PTEROCARPUS-MARSUPIUM.jpg" alt="Gammalu Tree Flowers">
+                <img src="New-rat-model-study-builds-evidence-backing-botanical-extract-s-blood-sugar-management-properties.jpg" alt="Botanical Illustration of Pterocarpus Marsupium">
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Section -->
+    <section class="usage-section" id="usage">
+        <div class="usage-container">
+            <h2 class="section-title">How to Use & Important Guidelines</h2>
+            <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 20px;">
+                Follow these traditional usage guidelines for maximum effectiveness and proper care of your natural wood tumbler.
+            </p>
+            <div class="infographic-wrapper">
+                <img src="භාවිතා කරන ආකාරය Gammalu.jpg" alt="How to use Gammalu Tumbler Infographic">
+            </div>
+        </div>
+    </section>
+
+    <!-- Artisan Heritage -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <h2>Warakkalaya Artisan Heritage</h2>
+            <p>
+                Located in Neluwakanda, Matale, Warakkalaya is an authentic Sri Lankan woodworking house. Beyond specialized herbal tumblers, we create premium custom furniture including chairs, sofas, almirahs (almura), and kawichchi built with lifetime wooden durability.
+            </p>
+            <a href="https://wa.me/94764334464" style="color: var(--accent-light); font-weight: 600; text-decoration: underline;">Inquire about custom furniture ordering</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Warakkalaya Wood Crafting</h4>
+                <p>132, Neluwakanda, Matale 21004, Sri Lanka.</p>
+                <p>Phone: 076 433 4464</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Order</h4>
+                <p>Direct WhatsApp Delivery Sri Lanka wide.</p>
+                <p style="margin-top: 10px;">Price: <strong>Rs 3,850</strong></p>
+            </div>
+            <div class="footer-col">
+                <h4>Hosting & Security</h4>
+                <p>Hosted on GitHub Pages</p>
+                <p>Secured with Cloudflare SSL</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Warakkalaya. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
